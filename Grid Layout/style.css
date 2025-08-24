@@ -1,0 +1,54 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background: #f4f4f4;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+.controls {
+  margin-bottom: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  margin: 0 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background: #2ecc71;
+  color: white;
+  transition: 0.2s;
+}
+
+button:hover {
+  background: #27ae60;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 15px;
+  position: relative;
+}
+
+.grid-item {
+  color: white;
+  border-radius: 10px;
+  padding: 20px;
+  font-size: 18px;
+  cursor: grab;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  position: relative;
+}
+
+.grid-item.dragging {
+  opacity: 0.5;
+  transform: scale(1.05);
+  cursor: grabbing;
+}
